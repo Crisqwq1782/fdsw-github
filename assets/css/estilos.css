@@ -1,43 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .navbar-brand{
   height: auto;
-  width: 5%;
-  
+  width: 80px;
+  min-width: 50px;
 }
 
-/* Hero Section */
 #Hero-Section {
-  /* Propiedades de fondo */
   background-image: url("../img/bg-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; 
+  background-attachment: fixed;
   
-  /* Altura base y centrado de Flexbox */
   height: 60vh;
-  min-height: 40vmin;
-  display: flex; /* Habilita Flexbox */
-  flex-direction: column; /* Apila el contenido verticalmente */
-  justify-content: center; /* Centrado vertical */
-  align-items: center; /* Centrado horizontal */
-  padding: 0 15px;
+  min-height: 400px;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px;
+  margin-top: 56px;
 }
 
 #Hero-Section h1 {
-  font-size: clamp(2.5rem, 8vw, 4rem); 
+  font-size: clamp(1.8rem, 6vw, 4rem); 
   color: white; 
-  text-align: center; /* Centrado de la línea de texto */
-  line-height: 1.2;
-  margin: 0; /* Asegura que no haya márgenes que interfieran */
+  text-align: center;
+  line-height: 1.1;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-weight: 700;
 }
 
-/* --- Media Query para Desktop --- */
 @media (min-width: 768px) {
     #Hero-Section {
-        height: 85vh; /* Aumenta la altura para mayor impacto en PC */
+        height: 85vh;
+        margin-top: 56px;
     }
 
     #Hero-Section h1 {
@@ -45,29 +60,187 @@ body {
         line-height: 1.1;
     }
 }
-/* Mis trabajos */
+
+/* Secciones generales */
+section {
+  padding: 30px 15px;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 50px 30px;
+  }
+}
+
+
+#Acerca-de-mi h2 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  margin-bottom: 20px;
+}
+
+#Acerca-de-mi p {
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  line-height: 1.6;
+}
+
+#Acerca-de-mi .row > div {
+  margin-bottom: 20px;
+}
+
+#Acerca-de-mi i {
+  color: #000000;
+  margin-bottom: 10px !important;
+}
+
+/* Trabajos / Tarjetas */
+#Mis-trabajos {
+  padding: 30px 15px;
+  background-color: #232323 !important;
+}
+
+@media (min-width: 768px) {
+  #Mis-trabajos {
+    padding: 50px;
+  }
+}
+
+#Mis-trabajos h2 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  margin-bottom: 30px;
+}
+
+#Mis-trabajos .card {
+  height: 100%;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#Mis-trabajos .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
 
 #Mis-trabajos .image-top {
-  height: 250px;
+  height: 200px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
+@media (min-width: 768px) {
+  #Mis-trabajos .image-top {
+    height: 250px;
+  }
+}
+
+#Mis-trabajos .card-title {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  margin-bottom: 10px;
+}
+
+#Mis-trabajos .card-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+#Mis-trabajos .btn {
+  font-size: 0.9rem;
+  padding: 6px 16px;
+}
+
 /* Contacto */
+#Contacto {
+  padding: 30px 15px;
+}
+
+@media (min-width: 768px) {
+  #Contacto {
+    padding: 50px 30px;
+  }
+}
+
+#Contacto h2 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  margin-bottom: 20px;
+}
+
+#Contacto form {
+  max-width: 600px;
+  margin: 30px auto 0;
+}
 
 #Contacto form label {
   font-weight: 700;
   color: #373a3c;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  margin-bottom: 8px;
+}
+
+#Contacto .form-control {
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  padding: 10px 12px;
+}
+
+#Contacto textarea.form-control {
+  resize: vertical;
+  max-height: 300px;
+  min-height: 120px;
+}
+
+#Contacto .btn {
+  padding: 10px 30px;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 @media (max-width: 768px) {
   #Contacto form label {
     font-weight: 400;
+    font-size: 0.95rem;
   }
 
-  .navbar-brand{
-    width: 100px;
+  .navbar-brand {
+    width: 60px;
   }
 
+  #Mis-trabajos {
+    padding: 20px 15px;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  #Contacto form {
+    margin: 20px 0 0 0;
+  }
+}
+
+@media (max-width: 576px) {
+  section {
+    padding: 20px 12px;
+  }
+
+  #Hero-Section {
+    min-height: 350px;
+    padding: 15px 10px;
+  }
+
+  #Hero-Section h1 {
+    font-size: clamp(1.4rem, 5vw, 2.5rem);
+  }
+
+  #Mis-trabajos .py-2 {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    background-color: #373a3c;
+  }
+
+  #Contacto form {
+    padding: 0;
+  }
 }

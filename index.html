@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Portafolio de Cristobal Fuenzalida - Desarrollador Full Stack">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
@@ -39,13 +40,13 @@
                 
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Acerca de mí</a>
+                        <a class="nav-link" href="#Acerca-de-mi">Acerca de mí</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Trabajos</a>
+                        <a class="nav-link" href="#Mis-trabajos">Trabajos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
+                        <a class="nav-link" href="#Contacto">Contacto</a>
                     </li>
                 </ul>
                 
@@ -105,52 +106,34 @@
         <div class="row">
             <div class="col-12 col-sm-4 py-2">
                 <div class="card">
-                    <div class="image-top" style="background-image: url(assets/img/card-1.png)"></div>
+                    <div class="image-top" style="background-image: url(assets/img/card-1.png)" role="img" aria-label="Proyecto: Asado en la Patagonia"></div>
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">Asado en la Patagonia</h5>
+                        <h5 class="card-title fw-bold">Cuppon Page</h5>
                         <p class="card-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Explicabo iure sint, perspiciatis distinctio molestias nihil
-                            repudiandae neque rem adipisci repellendus libero illo quo
-                            blanditiis, velit quasi ad, recusandae voluptates officia.
+                            En este proyecto se desarrollo una pagina web para una empresa de cuppon, la cual ofrece descuentos en diferentes productos y servicios. La pagina web cuenta con un diseño atractivo y funcional, permitiendo a los usuarios navegar fácilmente y encontrar las mejores ofertas disponibles.
                         </p>
-                        <button type="button" class="btn btn-outline-info">
-                            Ver más
-                        </button>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-sm-4 py-2">
                 <div class="card">
-                    <div class="image-top" style="background-image: url(assets/img/card-2.png)"></div>
+                    <div class="image-top" style="background-image: url(assets/img/card-2.png)" role="img" aria-label="Proyecto: Papas del fin del mundo"></div>
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">Papas del fin del mundo</h5>
+                        <h5 class="card-title fw-bold">Menú Restaurante</h5>
                         <p class="card-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Deserunt a culpa doloremque voluptatem dicta nam. Maxime ipsum,
-                            consequatur quos error fuga excepturi quo. Laudantium optio
-                            pariatur laboriosam modi, ea molestias?
+                            Landpage desarrollado para un restaurante ficticio, en el cual se muestra su menú de platos y bebidas. El diseño es atractivo y funcional, permitiendo a los usuarios navegar fácilmente y encontrar la información que necesitan sobre los productos ofrecidos por el restaurante.
                         </p>
-                        <button type="button" class="btn btn-outline-info">
-                            Ver más
-                        </button>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-sm-4 py-2">
                 <div class="card">
-                    <div class="image-top" style="background-image: url(assets/img/card-3.png)"></div>
+                    <div class="image-top" style="background-image: url(assets/img/card-3.png)" role="img" aria-label="Proyecto: Salmones de Alaska"></div>
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">Salmones de Alaska</h5>
+                        <h5 class="card-title fw-bold">Portafolio con CV y Formulario.</h5>
                         <p class="card-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Obcaecati facere quibusdam sint id laborum magni velit ducimus
-                            corporis facilis qui architecto dolor, accusamus eveniet
-                            exercitationem fugit. Quod autem neque ducimus.
+                            Portafolio personal desarrollado para mostrar mis habilidades y proyectos como desarrollador web. Incluye un currículum vitae detallado y un formulario de contacto para que los visitantes puedan comunicarse conmigo fácilmente.
                         </p>
-                        <button type="button" class="btn btn-outline-info">
-                            Ver más
-                        </button>
                     </div>
                 </div>
             </div>
@@ -174,23 +157,23 @@
 
 
             <div class="form-group mb-4">
-                <label class="mb-2">Nombre</label>
-                <input class="form-control" placeholder="Nombre">
+                <label class="mb-2" for="nombre">Nombre</label>
+                <input type="text" id="nombre" class="form-control" placeholder="Nombre" required>
             </div>
 
             <div class="form-group mb-4">
-                <label class="mb-2">Correo electrónico</label>
-                <input class="form-control" placeholder="Correo electrónico" />
+                <label class="mb-2" for="email">Correo electrónico</label>
+                <input type="email" id="email" class="form-control" placeholder="Correo electrónico" required />
             </div>
 
 
             <div class="form-group">
-                <label class="mb-2">Mensaje</label>
-                <textarea class="form-control" placeholder="Escribe aquí tu mensaje"></textarea>
+                <label class="mb-2" for="mensaje">Mensaje</label>
+                <textarea id="mensaje" class="form-control" placeholder="Escribe aquí tu mensaje" rows="5" required></textarea>
             </div>
 
             <div class="my-3 text-end">
-                <button class="btn btn-info text-light">Enviar</button>
+                <button type="submit" class="btn btn-info text-light">Enviar</button>
             </div>
 
 
